@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "aws-amplify": "^6.15.3",
+    "crypto-browserify": "^3.12.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "stream-browserify": "^3.0.0"
   },
   "devDependencies": {
     "@aws-amplify/backend": "^1.16.1",
