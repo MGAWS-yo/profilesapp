@@ -3,18 +3,13 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
   "dependencies": {
     "@aws-amplify/ui-react": "^6.11.2",
     "aws-amplify": "^6.15.3",
     "crypto-browserify": "^3.12.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-scripts": "^5.0.1",
     "stream-browserify": "^3.0.0"
   },
   "devDependencies": {
@@ -35,5 +30,15 @@
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "vite": "^7.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",           
+    "start:vite": "vite",                 
+    "build": "react-scripts build",       
+    "build:vite": "vite build",           
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   }
 }

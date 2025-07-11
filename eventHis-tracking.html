@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./src/assets/css/style.css">
+  <title>Ax Trace | Event Traceability </title>
+</head>
+
+<body class="body-event">
+  <div class="eventcontainer">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div>
+          <img src="./src/assets/img/Logo.png" alt="Alpha X Logo" class="logo" />
+        </div>
+
+        <input type="search" placeholder="Search" />
+        <nav class="nav-links">
+          <a href="#">Dashboard</a>
+          <a href="#" class="active"><strong>Event Trace</strong></a>
+          <a href="#">Supply chain</a>
+          <a href="#">Reports</a>
+          <a href="#">My company</a>
+          <a href="#">People</a>
+        </nav>
+        <div class="codes-available">
+          10,472<br>
+          <small>events available</small>
+          <button class="order-btn">More</button>
+        </div>
+      </div>
+      <div class="user-info">
+        <div class="avatar">J</div>
+        <div>
+          MG YO<br />
+          <small>menggi.yo@alphaxtec.com</small>
+        </div>
+        <div class="settings" title="Settings">&#9881;</div>
+      </div>
+    </aside>
+    <!-- Main content -->
+    <main class="main-content">
+      <div class="breadcrumb">
+        <span>Ax Trace &gt;</span>
+        <span><strong>Event Trace</strong></span>
+      </div>
+      <h1 class="title">12-inch Product / PRD-00001</h1>
+      <div class="code-label">
+        JdPqR-lsNwX-vmYeK-opzA93
+        <svg fill="#004347" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path
+            d="M19 7h-1V4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v3H6a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-1h1a3 3 0 0 0 3-3v-3a3 3 0 0 0-3-3Zm-8 0V5h6v2ZM7 19a1 1 0 0 1-1-1v-1h8v1a1 1 0 0 1-1 1Zm8-3H6v-4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1Z" />
+        </svg>
+      </div>
+      <div class="barcode-container">
+        <div class="barcode-item">
+          <img src="https://barcode.tec-it.com/barcode.ashx?data=01047112345678971725123110L123421SN000001&code=QRCode"
+            alt="GTIN" class="barcode-size" />
+          <br>
+          <small>GTIN</small>
+        </div>
+        <div class="barcode-item">
+          <img src="https://barcode.tec-it.com/barcode.ashx?data=01000123456789051725073110BATCHX21SERIALX&code=QRCode"
+            alt="UPC" class="barcode-size" />
+          <br>
+          <small>UPC</small>
+        </div>
+      </div>
+      <div class="tabs">
+        <!-- <a href="#">Overview</a>
+        <a href="#" class="active">Journey</a>
+        <a href="#">Transactions</a>
+        <a href="#">Sustainability</a>
+        <a href="#">Components <sup>7</sup></a> -->
+        <a href="#" class="active">Timeline</a>
+      </div>
+      <div class="ai-summary">
+        <h4>AI Summary</h4>
+        <p><em>Latest shipment was delayed in Taipei due to customs check. No damage reported.</em></p>
+      </div>
+      <!-- Filters -->
+      <div class="filters-export">
+        <div class="filters">
+          <label style="font-weight: 700;" for="city-filter">City:</label>
+          <select id="city-filter">
+            <option value="all">All</option>
+            <option value="Taipei">Taipei</option>
+            <option value="Tainan">Tainan</option>
+            <option value="Kaohsiung">Kaohsiung</option>
+          </select>
+
+          <label style="font-weight: 700;" for="event-type-filter">Type:</label>
+          <select id="event-type-filter">
+            <option value="all">All</option>
+            <option value="warehouse">Warehouse</option>
+            <option value="hub">Logistics Hub</option>
+            <option value="transport">Local Transport</option>
+          </select>
+        </div>
+        <!-- Export Button -->
+        <div class="export">
+          <button onclick="exportTimeline()">📤 Export</button>
+        </div>
+      </div>
+
+      <div class="summary-cards">
+        <div class="card last-update">
+          <i class="fas fa-sync-alt" style="color: #000000; font-size: 24px;" aria-hidden="true"></i>
+          Last update <strong>2h ago</strong>
+        </div>
+        <div class="card condition">
+          <i class="fa-solid fa-file-circle-check" style="color: #000000; font-size: 24px;" aria-hidden="true"></i>
+          Condition <strong>Intact</strong>
+        </div>
+        <div class="card critical">
+          <i class="fa fa-warning" style="color: red; font-size: 24px;" aria-hidden="true"></i>
+          Critical events <strong>1</strong>
+        </div>
+      </div>
+
+      <div class="journey-map-container">
+        <section class="timeline">
+          <article class="event">
+            <div class="event-icon current" title="Warehouse">&#127970;</div>
+            <h3 class="event-title">Warehouse <small>Current</small></h3>
+            <div class="event-subtitle">Kaohsiung, Taiwan</div>
+            <div class="event-details">
+              <div><span>Preparing for departure</span><time>2025-08-01 08:15</time></div>
+            </div>
+            <div class="event-details">
+              <div><span>Assigned to the shelf <strong>KBV567-01</strong></span><time>2023-07-28 16:01</time></div>
+            </div>
+            <div class="event-details">
+              <div><span>Received</span><time>2023-07-28 15:23</time></div>
+            </div>
+          </article>
+
+          <article class="event">
+            <div class="event-icon" title="Local transportation">&#128652;</div>
+            <div class="event-title-icon">
+              <h3 class="event-title">Local Transport</h3>
+              <i class="fa fa-check-circle event-icon-done"></i>
+            </div>
+            <time class="timestamps">2025-07-27 — 2025-07-28</time>
+          </article>
+
+          <article class="event">
+            <div class="event-icon" title="Logistics hub">&#128230;</div>
+            <div class="event-title-icon">
+              <h3 class="event-title">Logistics hub</h3>
+              <i class="fa fa-check-circle event-icon-done"></i>
+            </div>
+            <div class="event-subtitle">Tainan City, Taiwan</div>
+            <time class="timestamps">2025-07-22 — 2025-07-27</time>
+          </article>
+
+          <article class="event">
+            <div class="event-icon critical" title="Zhongxiao East Rd, Xinyi District, Taipei City 110, Taiwan">&#9888;
+            </div>
+            <div class="event-title-icon">
+              <h3 class="event-title">Logistics hub</h3>
+              <i class="fa fa-warning event-icon-warning"></i>
+            </div>
+            <div class="event-subtitle">Taipei City, Taiwan</div>
+            <time class="timestamps">2025-07-15 — 2025-07-21</time>
+          </article>
+
+          <article class="event">
+            <div class="event-icon" title="Factory">&#127979;</div>
+            <div class="event-title-icon">
+              <h3 class="event-title">Factory</h3>
+              <i class="fa fa-check-circle event-icon-done"></i>
+            </div>
+            <time class="timestamps">2025-07-14</time>
+          </article>
+        </section>
+        <aside class="map">
+          <iframe width="100%" height="400" frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d144160.9791072183!2d120.8986527!3d23.69781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ef308b41a9e6f%3A0x42b8b5e5c86e6b8c!2sTaiwan!5e0!3m2!1sen!2stw!4v1720617000000"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <!-- <button>Expand map</button> -->
+        </aside>
+      </div>
+      <!-- <a href="chatbot.html" id="chatbot-icon"><i class="far fa-comment-dots"></i></a> -->
+      <button class="logo-button" onclick="alert('Vite logo button clicked!')">
+        <img src="./src/assets/chatbot.svg" alt="chatbot" />
+      </button>
+      <!-- Chatbot panel loading chatbot.html -->
+      <div id="chatbot-panel">
+        <button id="close-chatbot" title="Close Chatbot">✖</button>
+        <iframe src="chatbot.html" title="Chatbot"></iframe>
+      </div>
+
+      <script>
+        const chatbotIcon = document.getElementById('chatbot-icon');
+        const chatbotPanel = document.getElementById('chatbot-panel');
+        const closeBtn = document.getElementById('close-chatbot');
+
+        chatbotIcon.addEventListener('click', function (event) {
+          event.preventDefault();
+          chatbotPanel.classList.add('open');
+        });
+
+        closeBtn.addEventListener('click', function () {
+          chatbotPanel.classList.remove('open');
+        });
+      </script>
+    </main>
+  </div>
+</body>
+
+</html>
